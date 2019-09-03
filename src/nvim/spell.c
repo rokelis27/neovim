@@ -1923,7 +1923,7 @@ static int count_syllables(slang_T *slang, char_u *word)
   if (slang->sl_syllable == NULL)
     return 0;
 
-  for (p = word; *p != NUL; p += len) {
+  for (p = word; *p != NULL; p += len) {
     // When running into a space reset counter.
     if (*p == ' ') {
       len = 1;
